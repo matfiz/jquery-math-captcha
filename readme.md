@@ -37,7 +37,7 @@ $("#math-captcha").mathCaptcha({
 			});
 ```
 
-== Options
+## Options
 | Option | Values (default) | Description |
 | ------ | ---------------  | ----------- |
 | imgPath | ('/img/') | Provides relative path, where plugin images are stored |
@@ -46,7 +46,7 @@ $("#math-captcha").mathCaptcha({
 | successFunction | - | Callback function when CAPTCHA solve properly. |
 | failFunction | - | Callback function when CAPTCHA solved in a wrong way. |
 
-== License
+## License
 Copyright 2014 Grzegorz Brzezinka, Mariusz Henn
 
 Released under the MIT license
