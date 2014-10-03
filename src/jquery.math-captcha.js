@@ -46,7 +46,7 @@
 		var number2 = Math.floor(Math.random() * 10);
 		//select operation
 		if (settings.operation == 'random') {
-			if (Math.floor(Math.random() * 2) > 1) {
+			if (Math.random() > 0.5) {
 				var operation = 'plus';
 			}
 			else
