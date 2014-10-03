@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery math captcha</title>
+		<style>
+
+		</style>
+		<link rel="stylesheet" type="text/css" href="../src/jquery.math-captcha.css" /> 
+	</head>
+	<body>
+		<div id="demo">
+			<form>
+				<p><label><code>Name</code> <input id="input-name" type="text" name="name" placeholder="Enter your name..."></label></p>
+				<p><label><code>Message</code> <textarea id="textarea" name="message" placeholder="Your message goes here"></textarea></label></p>
+				<p id="math-captcha"></p>
+			</form>
+		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="../src/jquery.math-captcha.js"></script>
+		<script type="text/javascript">
+			$("#math-captcha").mathCaptcha({
+				imgPath: '../src/img/',
+				operation: "random",
+				introText: 'Please enter the result of equation:',
+				successFunction: function() {
+					form = $('form');
+					form.append('<p><input type="submit" value="Submit"></p>');
+					$('.math-captcha-error').remove();
+				},
+				failFunction: function() {
+					form = $('form');
+					form.find('input[type="submit"]').remove();
+					if ($('.math-captcha-error').length < 1) {
+						$('#math-captcha').append("<p class='math-captcha-error'>Wrong result!</p>");
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

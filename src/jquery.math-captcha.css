@@ -1,0 +1,19 @@
+﻿.math-captcha {
+	border: 1px red solid;
+	width: 250px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+}
+
+.math-captcha img {
+	height: 30px;
+	width: auto;
+}
+
+.math-captcha input {
+	height: 30px;
+	width: 60px;
+	font-size: 30px;
+	margin-left: 5px;
+	line-height: 40px;
+}
